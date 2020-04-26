@@ -8,18 +8,23 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 
 import javafx.event.ActionEvent;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
-public class homeController {
+public class homeController extends dataController {
 
     @FXML
     private Button goSoal1;
+    @FXML
+    private TextField name;
 
     @FXML
     private void goSoal1Action(ActionEvent event) {
+        nama = name.getText();
+        System.out.println(nama);
         Node source = (Node) event.getSource();
         Stage stage = (Stage)  source.getScene().getWindow();
         stage.close();
@@ -32,6 +37,7 @@ public class homeController {
             stage1.setScene(new Scene(root));
             stage1.show();
         } catch (IOException e) {
+            System.err.println(e);
             System.out.println("error saat change stages");
         }
     }

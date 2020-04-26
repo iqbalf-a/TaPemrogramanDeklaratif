@@ -7,6 +7,8 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.soal2Controller">
    <children>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
@@ -25,7 +27,7 @@
                   <Font name="Arial Rounded MT Bold" size="16.0" />
                </font>
             </Label>
-            <TextField layoutX="189.0" layoutY="287.0" prefWidth="223.0" style="-fx-border-color: black;">
+            <TextField fx:id="answ2" layoutX="189.0" layoutY="287.0" prefWidth="223.0" style="-fx-border-color: black;">
                <font>
                   <Font name="Arial Rounded MT Bold" size="15.0" />
                </font>
@@ -35,6 +37,11 @@
                   <Font name="Arial Rounded MT Bold" size="20.0" />
                </font>
             </Button>
+            <ImageView fx:id="imgSoal" fitHeight="200.0" fitWidth="449.0" layoutX="77.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@2.jpg" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>
