@@ -1,5 +1,5 @@
 # TAPemrogramanDeklaratif
-Tugas akhir pemgrograman deklaratif. Menghubungkan prolog ke javafx
+Tugas akhir pemrograman deklaratif. Menghubungkan prolog ke javafx
 Offering B
 
 Anggota :
