@@ -1,2 +1,10 @@
 # TAPemrogramanDeklaratif
 Tugas akhir pemgrograman deklaratif. Menghubungkan prolog ke javafx
+Offering B
+
+Anggota :
+180535632544	MOH. IQBAL FIRMAN ARDIANSYAH
+180535632580	MUHAMMAD BUSTHOMI ARVIANSYAH
+180535632592	MANDA MAULANA MUSTHOFA
+180535632589	NAZIRO
+
