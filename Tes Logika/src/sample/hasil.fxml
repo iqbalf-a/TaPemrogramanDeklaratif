@@ -34,12 +34,12 @@
                   <Font name="Arial Rounded MT Bold" size="20.0" />
                </font>
             </Button>
-            <Label layoutX="281.0" layoutY="158.0" prefHeight="40.0" prefWidth="38.0" text="100">
+            <Label fx:id="yourScore" contentDisplay="CENTER" layoutX="281.0" layoutY="158.0" prefHeight="40.0" prefWidth="38.0" text="100">
                <font>
                   <Font name="Arial Rounded MT Bold" size="20.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="230.0" layoutY="118.0" prefHeight="40.0" prefWidth="141.0" text="Manda">
+            <Label fx:id="yourName" alignment="CENTER" contentDisplay="CENTER" layoutX="230.0" layoutY="118.0" prefHeight="40.0" prefWidth="141.0" text="Manda">
                <font>
                   <Font name="Arial Rounded MT Bold" size="20.0" />
                </font>

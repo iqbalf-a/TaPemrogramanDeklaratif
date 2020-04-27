@@ -14,6 +14,8 @@ import org.jpl7.Query;
 import java.io.IOException;
 
 public class soal5Controller {
+    public String name;
+    public int score;
     @FXML
     private Button goSoal6;
     @FXML
@@ -30,6 +32,7 @@ public class soal5Controller {
         q2.hasSolution();
         q2 = new Query("linearList([1, 2, 3, 3, [" + jawaban + ", 2, 1]], [1, 2, 3, 3, 3, 2, 1])");
         if (q2.hasSolution() == true) {
+            score++;
             System.out.println("Benar");
         }
         else System.out.println("Salah");
@@ -40,12 +43,19 @@ public class soal5Controller {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("soal6.fxml"));
             Parent root = loader.load();
+            soal6Controller soal6Controller = loader.getController();
+            soal6Controller.sendData(name, score);
             Stage stage1 = new Stage();
             stage1.setTitle("Tes Logika");
             stage1.setScene(new Scene(root));
             stage1.show();
+
         } catch (IOException e) {
             System.out.println("error saat change stages");
         }
+    }
+    public void sendData(String namaFromHome, int hasil) {
+        name = namaFromHome;
+        score = hasil;
     }
 }

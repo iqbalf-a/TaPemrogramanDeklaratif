@@ -13,3 +13,19 @@ xor(A, B) :- A\=B.
 linearList([], []).
 linearList(H, [H]) :- not(is_list(H)).
 linearList([H|T], Z) :- linearList(H, X), linearList(T, Y), append(X, Y, Z).
+
+isTree(nil).
+isTree(t(_,nil,nil)) :- !.
+isTree(t(_,L,nil)) :- isTree(L).
+isTree(t(_,L,R)) :- isTree(L), isTree(R), !.
+
+
+findLength(X, [H|T]) :- countLength(X, [H|T], 0).
+countLength(X, [], X).
+countLength(X, [_|T], C) :- D is C+1, countLength(X, T, D).
+
+soal8(A, B, C, D) :- D is A - (B * C/2).
+
+equal(A, B) :- A == B.
+
+soal10(A, B) :- B is sin(A)*sin(A) + cos(A)*cos(A).

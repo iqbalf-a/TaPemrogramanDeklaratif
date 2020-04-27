@@ -14,6 +14,8 @@ import org.jpl7.Query;
 import java.io.IOException;
 
 public class soal6Controller {
+    public String name;
+    public int score;
     @FXML
     private Button goSoal7;
     @FXML
@@ -47,6 +49,7 @@ public class soal6Controller {
             q2.hasSolution();
             q2 = new Query("isTree(t(7, t(6,nil,nil), t(8,nil,nil)))");
             if (q2.hasSolution() == z) {
+                score++;
                 System.out.println("Benar");
             }
             else System.out.println("Salah");
@@ -58,13 +61,20 @@ public class soal6Controller {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("soal7.fxml"));
                 Parent root = loader.load();
+                soal7Controller soal7Controller = loader.getController();
+                soal7Controller.sendData(name, score);
                 Stage stage1 = new Stage();
                 stage1.setTitle("Tes Logika");
                 stage1.setScene(new Scene(root));
                 stage1.show();
+
             } catch (IOException e) {
                 System.out.println("error saat change stages");
             }
         }
+    }
+    public void sendData(String namaFromHome, int hasil) {
+        name = namaFromHome;
+        score = hasil;
     }
 }

@@ -17,6 +17,8 @@ import java.util.ResourceBundle;
 
 public class soal1Controller extends dataController {
 
+    public String name;
+    public int score = 0;
 
     @FXML
     private Button goSoal2;
@@ -29,12 +31,14 @@ public class soal1Controller extends dataController {
         String s1 = "consult('D:/UM/Kuylah/S04/Pemrograman Deklaratif/TA/Tes Logika/src/sample/soal.pl')";
         Query q1 = new Query(s1);
         System.out.println(s1+""+(q1.hasSolution()? "Success" : "Failed"));
+        System.out.println(name);
 
         Query q2 = new Query(s1);
         q2.hasSolution();
         q2 = new Query("ayah(darsono, " + jawaban + ")");
         if (q2.hasSolution() == true) {
             System.out.println("Benar");
+            score++;
         }
         else System.out.println("Salah");
 
@@ -45,13 +49,20 @@ public class soal1Controller extends dataController {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("soal2.fxml"));
             Parent root = loader.load();
+            soal2Controller soal2Controller = loader.getController();
+            soal2Controller.sendData(name, score);
             Stage stage1 = new Stage();
             stage1.setTitle("Tes Logika");
             stage1.setScene(new Scene(root));
             stage1.show();
+
         } catch (IOException e) {
             System.out.println("error saat change stages");
         }
+    }
+
+    public void sendData(String nameFromHome) {
+        name = nameFromHome;
     }
 
     @Override

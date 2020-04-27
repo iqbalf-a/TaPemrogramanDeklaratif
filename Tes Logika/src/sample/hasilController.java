@@ -3,15 +3,27 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class hasilController extends dataController {
+public class hasilController extends dataController implements Initializable {
+
+    public String name;
+    public int score;
+
+    @FXML
+    private Label yourName;
+    @FXML
+    private Label yourScore;
     @FXML
     private Button exit;
 
@@ -38,5 +50,22 @@ public class hasilController extends dataController {
         } catch (IOException e) {
             System.out.println("error saat change stages");
         }
+    }
+
+    public void sendData(String namaFromHome, int hasil) {
+        name = namaFromHome;
+        score = hasil*100;
+        yourName.setText(name);
+        yourScore.setText(String.valueOf(score));
+    }
+
+    public void setLabel() {
+        yourName.setText(name);
+        yourScore.setText(String.valueOf(score));
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        setLabel();
     }
 }

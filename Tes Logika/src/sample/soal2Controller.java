@@ -17,6 +17,10 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class soal2Controller extends dataController {
+
+    public String name;
+    public int score;
+
     @FXML
     private Button goSoal3;
     @FXML
@@ -34,6 +38,7 @@ public class soal2Controller extends dataController {
         q2 = new Query("findLast(" + jawaban + ", [132, 213, 223, 232, 233])");
         if (q2.hasSolution() == true) {
             System.out.println("Benar");
+            score++;
         }
         else System.out.println("Salah");
         Node source = (Node) event.getSource();
@@ -43,15 +48,24 @@ public class soal2Controller extends dataController {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("soal3.fxml"));
             Parent root = loader.load();
+            soal3Controller soal3Controller = loader.getController();
+            soal3Controller.sendData(name, score);
             Stage stage1 = new Stage();
             stage1.setTitle("Tes Logika");
             stage1.setScene(new Scene(root));
             stage1.show();
+
         } catch (IOException e) {
             System.out.println("error saat change stages");
         }
     }
 
+    public void sendData(String namaFromHome, int hasil) {
+        name = namaFromHome;
+        score = hasil;
+    }
+
     @Override
-    public void initialize(URL location, ResourceBundle resources) {    }
+    public void initialize(URL location, ResourceBundle resources) {
+    }
 }
