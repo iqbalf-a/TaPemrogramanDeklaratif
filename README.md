@@ -3,6 +3,7 @@ Tugas akhir pemrograman deklaratif. Menghubungkan prolog dengan javafx
 Offering B
 
 Anggota :
+
 180535632544_MOH. IQBAL FIRMAN ARDIANSYAH
 
 180535632580_MUHAMMAD BUSTHOMI ARVIANSYAH
