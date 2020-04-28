@@ -54,7 +54,7 @@ public class hasilController extends dataController implements Initializable {
 
     public void sendData(String namaFromHome, int hasil) {
         name = namaFromHome;
-        score = hasil*100;
+        score = hasil*10;
         yourName.setText(name);
         yourScore.setText(String.valueOf(score));
     }

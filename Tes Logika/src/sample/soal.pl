@@ -33,7 +33,7 @@ countLength(X, [_|T], C) :- D is C+1, countLength(X, T, D).
 %soal 8 aritmatika
 soal8(A, B, C, D) :- D is A - (B * C/2).
 
-%soal 9 aritmatika
+%soal 9 logika
 equal(A, B) :- A == B.
 
 %soal 10 aritmatika
