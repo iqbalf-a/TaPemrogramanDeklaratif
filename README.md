@@ -4,7 +4,7 @@ Offering B
 
 Video Presentasi
 
-https://youtu.be/knQ2VGXCGSU
+https://youtu.be/gln_0dL50Ng
 
 Anggota :
 
